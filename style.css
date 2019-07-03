@@ -1,1 +1,126 @@
+:root {
+    --color-a: rgb(44, 138, 145);
+}
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+header {
+    display: grid;
+    grid-template-columns: 100px auto 300px;
+    grid-template-rows: 50px 50px;
+    grid-area: header;
+    padding: 10px;
+}
+
+main {
+    grid-area: main;
+    background-color: red;
+}
+
+footer {
+    grid-area: footer;
+    background-color: green;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+}
+
+.content-wrap {
+    width: 1200px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-columns: auto auto auto 300px;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header" "main main main aside" "footer footer footer footer";
+}
+
+.blog-icon {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.upper-block {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upper-block img {
+    display: inline-block;
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.lower-block {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    justify-self: stretch;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+
+.lower-block a {
+    display: inline-block;
+    flex-grow: 1;
+    padding: 1em;
+    margin-left: 5px;
+    border: 2px var(--color-a) solid;
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-a);
+    border-radius: 5px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    transition-property: color, background-color;
+}
+
+.lower-block>a:hover {
+    color: white;
+    background-color: var(--color-a);
+}
+
+#sideMenu {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .socials-block {
+        display: none;
+    }
+    header {
+        grid-template-columns: 25px auto 25px;
+        grid-template-rows: 25px 100px;
+        grid-area: header;
+    }
+    .lower-block {
+        display: none;
+    }
+    .upper-block img {
+        margin-left: 0;
+    }
+    .blog-icon {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        justify-self: center;
+        height: 100px;
+    }
+    #sideMenu {
+        display: initial;
+    }
+    #menuToggle {
+        display: block;
+    }
+}

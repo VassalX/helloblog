@@ -1,10 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content-wrap">
+        <header>
+            <nav id="sideMenu" role="navigation">
+                <div id="menuToggle">
+                    <!--
+                          A fake / hidden checkbox is used as click reciever,
+                          so you can use the :checked selector on it.
+                          -->
+                    <input type="checkbox" />
+
+                    <!--
+                          Some spans to act as a hamburger.
+                          
+                          They are acting like a real hamburger,
+                          not that McDonalds stuff.
+                          -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <!--
+                          Too bad the menu has to be inside of the button
+                          but hey, it's pure CSS magic.
+                          -->
+                    <ul id="menu">
+                        <a href="#">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
+                            <li>About</li>
+                        </a>
+                        <a href="#">
+                            <li>Info</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact</li>
+                        </a>
+                        <a href="https://erikterwan.com/" target="_blank">
+                            <li>Show me more</li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+            <img class="blog-icon" src="travel.svg" alt="airplane icon">
+            <div class="upper-block">
+                <img class="search-icon" src="search.svg">
+                <div class="socials-block">
+                    <img src="facebook.svg">
+                    <img src="telegram.svg">
+                    <img src="twitter.svg">
+                </div>
+            </div>
+            <nav class="lower-block">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <div class="post">
+                <div class="p-images">
+                    <!-- <img src="beach1.jpg">
+                    <img src="beach2.jpg">
+                    <img src="beach3.jpg"> -->
+                </div>
+                <div class="p-title">
+                    Title
+                </div>
+                <div class="p-time">
+                    Time
+                </div>
+                <div class="p-desc">
+                    Description
+                </div>
+            </div>
+        </main>
+        <aside>
+            aside
+        </aside>
+        <footer>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        </footer>
+    </div>
+</body>
+
 </html>
