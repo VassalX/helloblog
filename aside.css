@@ -17,9 +17,17 @@
     align-self: center;
 }
 
-.author .name,
+.author .name {
+    align-self: center;
+    font-weight: bold;
+}
+
 .author .info {
     align-self: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .social-icons {

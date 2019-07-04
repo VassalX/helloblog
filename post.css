@@ -50,10 +50,11 @@ main {
 
 .post .desc {
     margin-bottom: 5px;
-    max-lines: 3;
-    text-overflow: ellipsis;
+    padding-bottom: 2px;
     overflow: hidden;
-    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .post .rating,

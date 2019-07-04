@@ -123,6 +123,7 @@ a:hover {
     padding: 50px;
     padding-top: 125px;
     background: #ededed;
+    box-shadow: 0 0 5px 5px darkgray;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
