@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="hamburger.css">
     <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="aside.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -63,14 +64,14 @@
                 </div>
             </div>
             <nav class="lower-block">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
+                <a href="" class="btn-1">Home</a>
+                <a href="" class="btn-1">About</a>
+                <a href="" class="btn-1">Contact</a>
             </nav>
         </header>
         <main>
             <div class="post">
-                <img src="beach1.jpg">
+                <img class="photo" src="beach1.jpg">
                 <div class="title">
                     Title
                 </div>
@@ -84,13 +85,13 @@
                     <span class="rating">
                         Rating
                     </span>
-                    <span class="comments">
-                        Comments
-                    </span>
+                    <span class="comments-num">
+                            Comments
+                        </span>
                 </div>
             </div>
             <div class="post">
-                <img src="beach2.jpg">
+                <img class="photo" src="beach2.jpg">
                 <div class="title">
                     Title
                 </div>
@@ -104,13 +105,13 @@
                     <span class="rating">
                         Rating
                     </span>
-                    <span class="comments">
-                        Comments
-                    </span>
+                    <span class="comments-num">
+                            Comments
+                        </span>
                 </div>
             </div>
             <div class="post">
-                <img src="beach3.jpg">
+                <img class="photo" src="beach3.jpg">
                 <div class="title">
                     Title
                 </div>
@@ -124,13 +125,13 @@
                     <span class="rating">
                         Rating
                     </span>
-                    <span class="comments">
-                        Comments
-                    </span>
+                    <span class="comments-num">
+                            Comments
+                        </span>
                 </div>
             </div>
             <div class="post">
-                <img src="beach1.jpg">
+                <img class="photo" src="beach1.jpg">
                 <div class="title">
                     Title
                 </div>
@@ -144,14 +145,97 @@
                     <span class="rating">
                         Rating
                     </span>
-                    <span class="comments">
+                    <span class="comments-num">
                         Comments
                     </span>
                 </div>
             </div>
         </main>
+        <div class="aside-author">
+            <div class="side-block author">
+                <div class="title">
+                    Author
+                </div>
+                <img src="user.png" alt="author image">
+                <div class="name">
+                    Name
+                </div>
+                <div class="info">
+                    Info
+                </div>
+            </div>
+        </div>
         <aside>
-            aside
+            <div class="side-block">
+                <div class="title">
+                    Contacts
+                </div>
+                <div class="social-icons">
+                    <img src="facebook.svg">
+                    <img src="telegram.svg">
+                    <img src="twitter.svg">
+                </div>
+            </div>
+            <div class="side-block">
+                <div class="title">
+                    Subscribe
+                </div>
+                <form id="sub-form">
+                    <label for="user-name">Name</label>
+                    <input id="user-name" type="text">
+                    <label for="user-email">Email</label>
+                    <input id="user-email" type="email">
+                    <input class="btn-1" type="submit" value="Subscribe">
+                </form>
+            </div>
+            <div class="side-block">
+                <div class="title">
+                    Search
+                </div>
+                <form id="search-form">
+                    <input id="search" type="text">
+                    <input class="btn-1" type="submit" value="Search">
+                </form>
+            </div>
+            <div class="side-block">
+                <div class="title">
+                    Popular tags
+                </div>
+                <div id="tag-cloud">
+                    <span class="tag">beach</span>
+                    <span class="tag">relax</span>
+                    <span class="tag">sea</span>
+                    <span class="tag">sunbathing</span>
+                    <span class="tag">swimming</span>
+                    <span class="tag">travel</span>
+                    <span class="tag">vacation</span>
+                </div>
+            </div>
+            <div class="side-block">
+                <div class="title">
+                    Comments
+                </div>
+                <div class="comments">
+                    <div class="comment">
+                        <img class="avatar" src="user.png">
+                        <div class="details">
+                            <span class="user-name">Joe Henderson</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <img class="avatar" src="user.png">
+                        <div class="details">
+                            <span class="user-name">Joe Henderson</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much
+                        </div>
+                    </div>
+                </div>
+            </div>
         </aside>
         <footer>
             <div>Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"

@@ -1,4 +1,4 @@
-.post{
+.post {
     min-width: 250px;
     max-width: 500px;
     box-shadow: 0 0 3px 1px #dddddd;
@@ -9,17 +9,18 @@
     background: white;
     border-radius: 5px;
     margin: 10px;
-    flex: 1 1 0;
+    flex-basis: 0;
 }
 
-main{
+main {
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: flex-start;
 }
-    
-.post img{
+
+.post .photo {
     width: 100%;
     height: 200px;
     transition-duration: 0.1s;
@@ -27,25 +28,36 @@ main{
     object-fit: cover;
 }
 
-.post:hover img{
+.post:hover .photo {
     position: relative;
-    z-index:10;
+    z-index: 10;
     transform: scale(1.5, 1.5);
     box-shadow: 0 0 3px 1px #7e7e7e;
 }
 
-.post .title{
+.post .title {
     font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--color-b);
 }
 
-.post .time{
+.post .time {
     font-size: 10pt;
     color: gray;
+    margin-bottom: 5px;
+}
+
+.post .desc {
+    margin-bottom: 5px;
+    max-lines: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .post .rating,
-.post .rating{
+.post .comments-num {
     font-weight: bold;
     font-size: 10pt;
 }
-

@@ -1,8 +1,10 @@
 :root {
     --color-a: rgb(44, 138, 145);
+    --color-b: #e96a85;
 }
 
 body {
+    background-color: var(--color-a);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,12 +26,19 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: green;
+    padding: 10px;
+    background-color: white;
 }
 
 aside {
     grid-area: aside;
-    background-color: blue;
+    background-color: #ececec;
+}
+
+.aside-author {
+    height: fit-content;
+    grid-area: author;
+    background-color: #ececec;
 }
 
 .content-wrap {
@@ -39,9 +48,9 @@ aside {
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     display: grid;
-    grid-template-columns: auto auto auto 300px;
-    grid-template-rows: auto;
-    grid-template-areas: "header header header header" "main main main aside" "footer footer footer footer";
+    grid-template-columns: auto 300px;
+    grid-template-rows: 0fr 0fr 1fr;
+    grid-template-areas: "header header" "main author" "main aside" "footer footer";
 }
 
 .blog-icon {
@@ -75,16 +84,27 @@ aside {
 .lower-block a {
     display: inline-block;
     flex-grow: 1;
-    padding: 1em;
     margin-left: 5px;
+}
+
+.btn-1 {
+    padding: 1em;
     border: 2px var(--color-a) solid;
     text-decoration: none;
     text-align: center;
+    background-color: white;
     color: var(--color-a);
     border-radius: 5px;
+    font: inherit;
     font-weight: bold;
     transition-duration: 0.5s;
     transition-property: color, background-color;
+    cursor: pointer;
+}
+
+.btn-1:hover {
+    color: white;
+    background-color: var(--color-a);
 }
 
 .lower-block>a:hover {
@@ -96,8 +116,8 @@ aside {
     display: none;
 }
 
-@media (max-width: 600px) {
-    .socials-block {
+@media (max-width: 700px) {
+    .upper-block .socials-block {
         display: none;
     }
     header {
@@ -122,5 +142,10 @@ aside {
     }
     #menuToggle {
         display: block;
+    }
+    .content-wrap {
+        grid-template-columns: auto;
+        grid-template-rows: 0fr 0fr 1fr 0fr 0fr;
+        grid-template-areas: "header" "author" "main" "aside" "footer";
     }
 }

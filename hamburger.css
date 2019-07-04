@@ -80,6 +80,10 @@ a:hover {
     background: #232323;
 }
 
+#menuToggle input:checked {
+    position: fixed;
+}
+
 
 /*
   * But let's hide the middle one.
@@ -97,6 +101,12 @@ a:hover {
 
 #menuToggle input:checked~span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
+    top: 28px;
+    position: fixed;
+}
+
+#menuToggle input:checked~span:nth-last-child(4) {
+    position: fixed;
 }
 
 
@@ -106,8 +116,9 @@ a:hover {
   */
 
 #menu {
-    position: absolute;
-    width: 300px;
+    position: fixed;
+    width: 200px;
+    height: 100%;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
